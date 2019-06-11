@@ -18,7 +18,7 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 app.post('/new_event', function(req, res) {
-    
+    console.log(req.body);
 	res.status(201).end();
 });
 
