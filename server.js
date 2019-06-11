@@ -19,7 +19,7 @@ app.get('/', function(req, res) {
 });
 app.post('/new_event', function(req, res) {
     
-	console.log('Request Details' + req)
+	res.status(201).end();
 });
 
 
