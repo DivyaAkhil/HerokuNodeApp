@@ -12,11 +12,16 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 // set the home page route
-app.get('/new_event', function(req, res) {
-    console.log('Request Details' + req)
+app.get('/', function(req, res) {
+    
 	// ejs render automatically looks in the views folder
-	//res.render('index');
+	res.render('index');
 });
+app.post('/new_event', function(req, res) {
+    
+	console.log('Request Details' + req)
+});
+
 
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
